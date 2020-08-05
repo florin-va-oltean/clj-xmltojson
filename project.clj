@@ -1,9 +1,19 @@
-(defproject xmltojson "0.1.1"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+(defproject xmltojson "0.2.0"
+  :description "cloned from github "
+  :url "https://github.com/florin-va-oltean/clj-xmltojson.git"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.10.1"]]
+  :repositories [["releases" {
+                              :url "https://repo.deps.co/quasar-software-research/releases"
+                              :sign-releases false
+                              :username :env/deps_key
+                              :password :env/deps_secret}]
+                 ["snapshots" {
+                               :url "https://repo.deps.co/quasar-software-research/snapshots"
+                               :sign-releases false
+                               :username :env/deps_key
+                               :password :env/deps_secret}]]
   :profiles {:uberjar {}
              :dev     [:profiles/dev]
              :test    [:profiles/dev :profiles/test]
